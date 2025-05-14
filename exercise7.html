@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Responsive Example</title>
+    <style>
+        .block {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .flex-group {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        @media (max-width: 700px) {
+            .flex-group {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 400px) {
+            .block {
+                background: yellow;
+            }
+        }
+    </style>
+</head>
+<body style="background: whitesmoke; display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="flex-group" id="flexGroup">
+        <div class="block" id="block1"></div>
+        <div class="block" id="block2"></div>
+        <div class="block" id="block3"></div>
+    </div>
+</body>
+</html>

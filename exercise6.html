@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Example</title>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: whitesmoke;
+            height: 100vh;
+        }
+        @media (max-width: 600px) {
+            .grid-wrapper {
+                gap: 10px;
+            }
+        }
+        @media (max-width: 400px) {
+            .grid-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-wrapper" id="gridWrapper">
+        <div class="square" id="sq1"></div>
+        <div class="square" id="sq2"></div>
+        <div class="square" id="sq3"></div>
+        <div class="square" id="sq4"></div>
+        <div class="square" id="sq5"></div>
+        <div class="square" id="sq6"></div>
+        <div class="square" id="sq7"></div>
+        <div class="square" id="sq8"></div>
+        <div class="square" id="sq9"></div>
+    </div>
+</body>
+</html>

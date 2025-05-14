@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Shop Layout</title>
+    <style>
+        .item {
+            width: 300px;
+            height: 300px;
+            background: blue;
+            /* padding: 0; */
+        }
+        .items-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        @media (max-width: 900px) {
+            .items-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+        @media (max-width: 600px) {
+            .items-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .items-wrapper {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="items-wrapper" id="itemsWrapper">
+        <div class="item" id="itemA"></div>
+        <div class="item" id="itemB"></div>
+        <div class="item" id="itemC"></div>
+        <div class="item" id="itemD"></div>
+        <div class="item" id="itemE"></div>
+        <div class="item" id="itemF"></div>
+    </div>
+</body>
+</html>
